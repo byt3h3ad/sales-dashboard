@@ -6,7 +6,6 @@ export const SignOut = () => {
   const { updateState } = React.useContext(AuthContext);
   const handleSignOut = () => {
     updateState({ user: undefined });
-    console.log("signed out");
   };
   return (
     <Button className="h-10 px-4 py-3" onClick={handleSignOut}>

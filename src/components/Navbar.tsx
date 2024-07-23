@@ -3,7 +3,7 @@ import { SignOut } from "./SignOut";
 
 export const Navbar = ({ name }: { name: string }) => {
   return (
-    <div className="flex justify-between px-8 border-b border-gray-400 pb-2">
+    <nav className="flex justify-between px-8 border-b border-gray-400 py-4">
       <h1 className="text-2xl font-bold">My Dashboard</h1>
       <div className="flex justify-end items-center space-x-4">
         <p className="hover:cursor-pointer group">
@@ -14,6 +14,6 @@ export const Navbar = ({ name }: { name: string }) => {
         </p>
         <SignOut />
       </div>
-    </div>
+    </nav>
   );
 };
