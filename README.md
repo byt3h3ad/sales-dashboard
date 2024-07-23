@@ -16,21 +16,33 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design decisions
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I decided to use shadcn for the Table, ScrollArea components, and stripped down versions of the input and Button component to save time.
 
-## Learn More
+I assumed that the data has 4 main fields:
 
-To learn more about Next.js, take a look at the following resources:
+```typescript
+type Data = {
+  date: string;
+  product: string;
+  orders: number;
+  sales: number;
+};
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The data manipulations are mostly implemented in the `src/lib/data.ts` file.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The user is spoofed using dummy data.
 
-## Deploy on Vercel
+## Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Use `react-hook-form` with `zod` for login validation to improve security. Currently has none.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Style the charts better and try out shadcn charts.
+
+- Use a better colour scheme.
+
+- Support light mode.
+
+- Generate the dummy data using `[fakerjs](https://fakerjs.dev/)`.

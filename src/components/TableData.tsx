@@ -15,7 +15,7 @@ export const TableData: React.FC<React.HTMLAttributes<HTMLTableElement>> = ({
   className,
 }) => {
   return (
-    <Table className={cn(className)}>
+    <Table className={cn(className, "text-xs md:text-fray-rp")}>
       <TableHeader>
         <TableRow>
           <TableHead>Date</TableHead>

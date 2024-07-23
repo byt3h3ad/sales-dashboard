@@ -16,7 +16,7 @@ export const LoginForm = () => {
   };
   const router = useRouter();
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center px-2">
       <form className="border rounded-md p-4">
         <p className="text-medium">
           Enter your email below to login to your account
